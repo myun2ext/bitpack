@@ -9,11 +9,24 @@ namespace myun2
 		{
 			//
 			//	Category A:
-			//	  3 bits of type identify + 5 bits of length + any bytes value
+			//	  3 bits of type identify + 5 bits of value
 			//
 			namespace category_a
 			{
+				//	Micro Unsigned Int.
+				//	  value is unsigned int at
+				struct micro_unsigned_int {
+					typedef
+						unsigned char
+					type;
+					static const unsigned int identify = 0x00;
+					static const unsigned int value_length = 0;
+				};
 			}
+
+			struct category_a_trait {
+				static const unsigned int identify_bits = 3;
+			};
 
 			//
 			//	Category B:

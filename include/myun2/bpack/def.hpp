@@ -13,15 +13,19 @@ namespace myun2
 			//
 			namespace category_a
 			{
-				//	Micro Unsigned Int.
-				//	  value is unsigned int at
-				struct micro_unsigned_int {
-					typedef
-						unsigned char
-					type;
-					static const unsigned int identify = 0x00;
+				template <typename T, unsigned int _Identify>
+				struct base {
+					typedef T type;
+					static const unsigned int identify = _Identify;
 					static const unsigned int value_length = 0;
+
+					static T mask(const T& v) { return v & 0xE0; }
+					static bool is(const T& v) { return mask(v) == identify; }
 				};
+				
+				//	Micro Unsigned Int. (B000xxxxx)
+				//	  value is unsigned int at
+				struct micro_unsigned_int : base<unsigned char, 0x00> {};
 			}
 
 			struct category_a_trait {

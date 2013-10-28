@@ -9,9 +9,17 @@ namespace myun2
 		{
 			//
 			//	Category A:
-			//	  3 type identify bits + 5 length bits
+			//	  3 bits of type identify + 5 bits of length + any bytes value
 			//
 			namespace category_a
+			{
+			}
+
+			//
+			//	Category B:
+			//	  1byte(8bits) of type identify + any bytes value
+			//
+			namespace category_b
 			{
 			}
 		}

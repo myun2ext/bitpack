@@ -5,6 +5,8 @@ namespace myun2
 {
 	namespace bitpack
 	{
+		void parse(const void* p, const void *tail) {
+		}
 	}
 }
 

@@ -5,6 +5,9 @@ namespace myun2
 {
 	namespace bitpack
 	{
+		namespace defs
+		{
+		}
 	}
 }
 

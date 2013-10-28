@@ -7,6 +7,13 @@ namespace myun2
 	{
 		namespace defs
 		{
+			//
+			//	Category A:
+			//	  3 type identify bits + 5 length bits
+			//
+			namespace category_a
+			{
+			}
 		}
 	}
 }
